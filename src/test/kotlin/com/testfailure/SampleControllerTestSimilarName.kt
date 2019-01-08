@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test
 import javax.inject.Inject
 
 @MicronautTest
-class AnotherControllerTest {
+class SampleControllerTestSimilarName {
 
     @Inject
     @field:Client("/")
@@ -22,7 +22,6 @@ class AnotherControllerTest {
 
     @Test
     fun `should return hello world`() {
-//        `when`(service.getMessage()).thenReturn("Something else")
         every { service.getMessage() }.returns("Something else")
         val response: String = client.toBlocking().retrieve("/test/hello")
         assertTrue(response == "Something else")
