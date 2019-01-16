@@ -1,6 +1,3 @@
 # micronaut-testcase
 
-./gradlew build 
-
-Results in injection failure, due to test class names being similar and using MockBean.
-If you rename one of the test classes, then both will pass.
+Includes example to demonstrate an attempt to test the json body of a 400 response - so far we've only managed to test the status code
